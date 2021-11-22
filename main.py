@@ -30,7 +30,7 @@ while not end_of_game:
 
     #TODO-4: - If the user has entered a letter they've already guessed, print the letter and let them know.
     if guess in letters_guessed:
-        print(f"You guessed '{guess}' already. Try a different letter.")
+        print(f"You've already guessed '{guess}'. Try a different letter.")
 
 
     else:
@@ -45,7 +45,8 @@ while not end_of_game:
         #Check if user is wrong.
         if guess not in chosen_word:
             #TODO-5: - If the letter is not in the chosen_word, print out the letter and let them know it's not in the word.
-            print(f"The letter '{guess}' is not in the word.")
+            print(f"You guessed '{guess}', that's not in the word. You lose a life.")
+            
             lives -= 1
             if lives == 0:
                 end_of_game = True
